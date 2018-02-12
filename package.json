@@ -6,7 +6,10 @@
 	"files": [
 		"index.js",
 		"agency.js",
+		"stops.js",
 		"routes.js",
+		"calendar.js",
+		"calendar_dates.js",
 		"feed_info.js",
 		"lib"
 	],
