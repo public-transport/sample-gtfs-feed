@@ -1,0 +1,26 @@
+{
+	"name": "sample-gtfs-feed",
+	"description": "An imaginary GTFS data set used for testing.",
+	"version": "0.1.0",
+	"main": "index.js",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"gtfs",
+		"mock",
+		"data",
+		"public transport",
+		"transit"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/sample-gtfs-feed",
+	"repository": "derhuerst/sample-gtfs-feed",
+	"bugs": "https://github.com/derhuerst/sample-gtfs-feed/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=6"
+	},
+	"dependencies": {
+	}
+}
