@@ -4,7 +4,11 @@
 	"version": "0.1.0",
 	"main": "index.js",
 	"files": [
-		"index.js"
+		"index.js",
+		"agency.js",
+		"routes.js",
+		"feed_info.js",
+		"lib"
 	],
 	"keywords": [
 		"gtfs",
