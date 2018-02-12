@@ -23,4 +23,7 @@ const b = { // full
 	route_sort_order: '4'
 }
 
-module.exports = Object.assign([a, b], {minimal: a, full: b})
+module.exports = Object.assign([a, b], {
+	a, minimal: a,
+	b, full: b
+})

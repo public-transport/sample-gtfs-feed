@@ -8,6 +8,8 @@
 		"agency.js",
 		"stops.js",
 		"routes.js",
+		"trips.js",
+		"stop_times.js",
 		"calendar.js",
 		"calendar_dates.js",
 		"feed_info.js",
