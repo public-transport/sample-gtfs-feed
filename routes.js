@@ -1,10 +1,11 @@
 'use strict'
 
-const {fta} = require('./agency')
+const {mta, fta} = require('./agency')
 const {bus, tram} = require('./lib/route-types')
 
 const a = { // minimal
 	route_id: 'A',
+	agency_id: mta.agency_id,
 	route_short_name: 'Ada',
 	route_long_name: 'Ada Lovelace Bus Line',
 	route_type: bus + ''

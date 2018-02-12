@@ -5,6 +5,8 @@
 	"main": "index.js",
 	"files": [
 		"index.js",
+		"full.js",
+		"minimal.js",
 		"agency.js",
 		"stops.js",
 		"routes.js",

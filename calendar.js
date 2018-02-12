@@ -42,5 +42,6 @@ const onWeekends = {
 }
 
 module.exports = Object.assign([allDay, onWorkingDays, onWeekends], {
-	allDay, onWorkingDays, onWeekends
+	allDay, minimal: allDay,
+	onWorkingDays, onWeekends
 })

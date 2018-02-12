@@ -44,4 +44,6 @@ const oneWeekNoService = [].concat(
 )
 
 const all = [].concat(laborDay, moreWorkDay, oneWeekNoService)
-module.exports = Object.assign(all, {laborDay, moreWorkDay, oneWeekNoService})
+module.exports = Object.assign(all, {
+	laborDay, moreWorkDay, oneWeekNoService
+})
