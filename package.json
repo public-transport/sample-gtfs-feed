@@ -15,6 +15,8 @@
 		"calendar.js",
 		"calendar_dates.js",
 		"feed_info.js",
+		"csv",
+		"json",
 		"lib"
 	],
 	"keywords": [
@@ -32,6 +34,13 @@
 	"engines": {
 		"node": ">=6"
 	},
-	"dependencies": {
+	"dependencies": {},
+	"devDependencies": {
+		"csv-write-stream": "^2.0.0",
+		"pump": "^3.0.0"
+	},
+	"scripts": {
+		"build": "env NODE_ENV=dev node build.js",
+		"prepublishOnly": "npm run build"
 	}
 }
