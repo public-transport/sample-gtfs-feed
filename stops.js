@@ -58,6 +58,7 @@ const museum = [{ // full
 	stop_url: fta.agency_url + 'stations/museum.html',
 	location_type: '1'
 }]
+museum.station = museum[0]
 
 const lake = [{
 	stop_id: 'lake',
@@ -68,6 +69,7 @@ const lake = [{
 	// todo: zone_id
 	stop_url: fta.agency_url + 'stations/lake.html'
 }]
+lake.station = lake[0]
 
 const all = [].concat(center, airport, museum, lake)
 module.exports = Object.assign(all, {center, airport, museum, lake})
