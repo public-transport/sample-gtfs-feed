@@ -9,5 +9,5 @@ pnpm-debug.log
 package-lock.json
 shrinkwrap.yaml
 
-csv
+gtfs
 json
