@@ -39,7 +39,7 @@ require('sample-gtfs-feed/agency')
 ```
 
 ```js
-fs.readFileSync(require.resolve('sample-gtfs-feed/csv/agency.csv'), {
+fs.readFileSync(require.resolve('sample-gtfs-feed/gtfs/agency.txt'), {
 	encoding: 'utf8'
 })
 ```

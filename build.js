@@ -14,11 +14,11 @@ const showError = (err) => {
 }
 
 for (let set of Object.keys(full)) {
-	// write CSV
+	// write GTFS
 	const sink = toCsv()
 	pump(
 		sink,
-		fs.createWriteStream(path.join(__dirname, 'csv', set + '.csv')),
+		fs.createWriteStream(path.join(__dirname, 'gtfs', set + '.txt')),
 		showError
 	)
 	if (Array.isArray(full[set])) {
