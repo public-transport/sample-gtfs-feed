@@ -67,6 +67,6 @@ const bOutbound = [{
 
 const all = [].concat(aDowntown, aOutbound, bDowntown, bOutbound)
 module.exports = Object.assign(all, {
-	aDowntown, aOutbound, minimal: [aDowntown, aOutbound],
-	bDowntown, bOutbound, full: [bDowntown, bOutbound]
+	aDowntown, aOutbound, minimal: [].concat(aDowntown, aOutbound),
+	bDowntown, bOutbound, full: [].concat(bDowntown, bOutbound)
 })
