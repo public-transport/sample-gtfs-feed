@@ -11,7 +11,7 @@ const applyToTrips = (trips, seq, arr, dep, stop, more = {}) => {
 			arrival_time: arr,
 			departure_time: dep,
 			stop_id: stop.stop_id,
-			stop_timesuence: seq + ''
+			stop_timesequence: seq + ''
 		}, more))
 	}
 	return stop_times
