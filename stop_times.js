@@ -1,7 +1,7 @@
 'use strict'
 
 const {center, museum, airport, lake} = require('./stops')
-const {aDowntown, aOutbound, bDowntown, bOutbound} = require('./trips')
+const {aDowntown, aOutbound, bDowntown, bOutbound, cDowntown} = require('./trips')
 
 const applyToTrips = (trips, seq, arr, dep, stop, more = {}) => {
 	const stop_times = []
@@ -43,7 +43,14 @@ const forBOutbound = [].concat(
 	applyToTrips(bOutbound, 15, '18:30', '18:31', airport.station)
 )
 
-const all = [].concat(forADowntown, forAOutbound, forBDowntown, forBOutbound)
+const forCDowntown = [].concat(
+	applyToTrips(cDowntown, 0, '15:27', '15:28', airport.station),
+	applyToTrips(cDowntown, 1, '15:33', '15:35', center.station)
+)
+
+// todo: 2 trips for one schedule
+
+const all = [].concat(forADowntown, forAOutbound, forBDowntown, forBOutbound, forCDowntown)
 module.exports = Object.assign(all, {
 	minimal: [].concat(forADowntown, forAOutbound),
 	full: all

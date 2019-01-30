@@ -24,7 +24,15 @@ const b = { // full
 	route_sort_order: '4'
 }
 
+const c = {
+	route_id: 'C',
+	agency_id: mta.agency_id,
+	route_short_name: 'Cerf',
+	route_long_name: 'Cerf Express Line',
+	route_type: tram + ''
+}
+
 module.exports = Object.assign([a, b], {
-	a, minimal: a,
-	b, full: b
+	a, b, c,
+	minimal: a, full: b
 })

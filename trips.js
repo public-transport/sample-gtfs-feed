@@ -1,6 +1,6 @@
 'use strict'
 
-const {a, b} = require('./routes')
+const {a, b, c} = require('./routes')
 const {allDay, onWorkingDays, onWeekends} = require('./calendar')
 
 // minimal
@@ -65,8 +65,16 @@ const bOutbound = [{
 	bikes_allowed: '1'
 }]
 
-const all = [].concat(aDowntown, aOutbound, bDowntown, bOutbound)
+const cDowntown = [{
+	route_id: c.route_id,
+	service_id: allDay.service_id,
+	trip_id: 'c-downtown-all-day',
+	trip_headsign: 'Cerf Express'
+}]
+
+const all = [].concat(aDowntown, aOutbound, bDowntown, bOutbound, cDowntown)
 module.exports = Object.assign(all, {
 	aDowntown, aOutbound, minimal: [].concat(aDowntown, aOutbound),
-	bDowntown, bOutbound, full: [].concat(bDowntown, bOutbound)
+	bDowntown, bOutbound, full: [].concat(bDowntown, bOutbound),
+	cDowntown
 })
