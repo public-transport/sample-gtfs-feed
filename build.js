@@ -14,15 +14,27 @@ const showError = (err) => {
 }
 
 for (let set of Object.keys(full)) {
+	// determine columns
+	let cols = undefined
+	if (Array.isArray(full[set])) {
+		cols = new Set()
+		for (const item of full[set]) {
+			for (const col of Object.keys(item)) cols.add(col)
+		}
+		cols = Array.from(cols.values())
+	}
+
 	// write GTFS
-	const sink = toCsv()
+	const sink = toCsv({headers: cols})
 	pump(
 		sink,
 		fs.createWriteStream(path.join(__dirname, 'gtfs', set + '.txt')),
 		showError
 	)
 	if (Array.isArray(full[set])) {
-		for (let item of full[set]) sink.write(item)
+		for (let item of full[set]) {
+			sink.write(item)
+		}
 	} else sink.write(full[set])
 	sink.end()
 
