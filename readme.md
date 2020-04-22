@@ -16,6 +16,52 @@ npm install sample-gtfs-feed
 
 ## Usage
 
+Using following GTFS tables, `sample-gtfs-feed` forms a GTFS feed for a simple fictional transit network:
+
+- [`agency`](https://developers.google.com/transit/gtfs/reference#agencytxt)
+- [`stops`](https://developers.google.com/transit/gtfs/reference#stopstxt)
+- [`routes`](https://developers.google.com/transit/gtfs/reference#routestxt)
+- [`trips`](https://developers.google.com/transit/gtfs/reference#tripstxt)
+- [`stop_times`](https://developers.google.com/transit/gtfs/reference#stop_timestxt)
+- [`calendar`](https://developers.google.com/transit/gtfs/reference#calendartxt)
+- [`calendar_dates`](https://developers.google.com/transit/gtfs/reference#calendar_datestxt)
+- [`transfers`](https://developers.google.com/transit/gtfs/reference#transferstxt)
+- [`pathways`](https://developers.google.com/transit/gtfs/reference#pathwaystxt)
+- [`levels`](https://developers.google.com/transit/gtfs/reference#levelstxt)
+- [`feed_info`](https://developers.google.com/transit/gtfs/reference#feed_infotxt)
+
+### plain CSV files
+
+The `sample-gtfs-feed` npm package contains plain CSV files, which you can process like any GTFS feed.
+
+To get the path to one of these files in Node.js, use `require.resolve`:
+
+```js
+fs.readFileSync(require.resolve('sample-gtfs-feed/gtfs/agency.txt'), {
+	encoding: 'utf8'
+})
+```
+
+To get the path from the command line, use `node -p`:
+
+```sh
+cat $(node -p 'require.resolve("sample-gtfs-feed/gtfs/agency.txt")')
+```
+
+```csv
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+FTA,Full Transit Agency,https://fta.example.org/,Europe/Warsaw,de,+49 123 456 789 0,https://fta.example.org/fares.html,contact@fta.example.org
+MTA,Minimal Transit Agency,https://mta.example.org/,Europe/Berlin,,,,
+```
+
+### JSON files
+
+```shell
+cat $(node -p 'require.resolve("sample-gtfs-feed/json/agency.json")')
+```
+
+### JS objects
+
 ```js
 require('sample-gtfs-feed/agency')
 ```
@@ -37,20 +83,6 @@ require('sample-gtfs-feed/agency')
 	agency_timezone: 'Europe/Berlin'
 }]
 ```
-
-```js
-fs.readFileSync(require.resolve('sample-gtfs-feed/gtfs/agency.txt'), {
-	encoding: 'utf8'
-})
-```
-
-```csv
-agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
-FTA,Full Transit Agency,https://fta.example.org/,Europe/Warsaw,de,+49 123 456 789 0,https://fta.example.org/fares.html,contact@fta.example.org
-MTA,Minimal Transit Agency,https://mta.example.org/,Europe/Berlin,,,,
-```
-
-If you want to use JSON, use `sample-gtfs-feed/json/agency.json`.
 
 
 ## Contributing
