@@ -7,9 +7,12 @@ const minimal = {
 }
 
 const full = Object.assign({
+	default_lange: 'de-AT',
 	feed_start_date: '20190303',
 	feed_end_date: '20190810',
-	feed_version: 'third version'
+	feed_version: 'third version',
+	feed_contact_email: 'contact@example.org',
+	feed_contact_url: 'https://example.org/',
 }, minimal)
 
 module.exports = {minimal, full}
