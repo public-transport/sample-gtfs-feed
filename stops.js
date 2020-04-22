@@ -34,6 +34,16 @@ const airport = [{ // full
 	parent_station: 'airport',
 	wheelchair_boarding: '2',
 }, {
+	stop_id: 'airport-1-access',
+	stop_name: null,
+	stop_desc: null,
+	stop_lat: 52.11,
+	stop_lon: 14.11,
+	location_type: '3',
+	parent_station: 'airport',
+	wheelchair_boarding: '2',
+	platform_code: '1',
+}, {
 	stop_id: 'airport-2',
 	stop_name: 'Platform 2',
 	stop_desc: 'Platform 2',
@@ -43,6 +53,34 @@ const airport = [{ // full
 	location_type: '0',
 	parent_station: 'airport',
 	wheelchair_boarding: '0',
+	platform_code: '2',
+}, {
+	stop_id: 'airport-2-boarding',
+	stop_name: 'pl. 2 boarding',
+	stop_desc: 'platform 2 boarding area',
+	stop_lat: 52.21,
+	stop_lon: 14.21,
+	location_type: '4',
+	parent_station: 'airport-2',
+	wheelchair_boarding: '1',
+}, {
+	stop_id: 'airport-2-access',
+	stop_name: null,
+	stop_desc: null,
+	stop_lat: 52.22,
+	stop_lon: 14.22,
+	location_type: '3',
+	parent_station: 'airport',
+	wheelchair_boarding: '1',
+}, {
+	stop_id: 'airport-entrance',
+	stop_name: 'Entrance',
+	stop_desc: null,
+	stop_lat: 52.3,
+	stop_lon: 14.3,
+	location_type: '2',
+	parent_station: 'airport',
+	wheelchair_boarding: '1',
 }]
 airport.station = airport[0]
 airport.stops = airport.slice(1)
