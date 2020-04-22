@@ -22,7 +22,7 @@ const airport = [{ // full
 	stop_url: fta.agency_url + 'stations/airport.html',
 	location_type: '1',
 	stop_timezone: 'Europe/Berlin',
-	wheelchair_boardings: '1'
+	wheelchair_boarding: '1'
 }, {
 	stop_id: 'airport-1',
 	stop_name: 'Platform 1',
@@ -32,7 +32,7 @@ const airport = [{ // full
 	// todo: zone_id
 	location_type: '0',
 	parent_station: 'airport',
-	wheelchair_boardings: '2'
+	wheelchair_boarding: '2',
 }, {
 	stop_id: 'airport-2',
 	stop_name: 'Platform 2',
@@ -42,7 +42,7 @@ const airport = [{ // full
 	// todo: zone_id
 	location_type: '0',
 	parent_station: 'airport',
-	wheelchair_boardings: '0'
+	wheelchair_boarding: '0',
 }]
 airport.station = airport[0]
 airport.stops = airport.slice(1)
