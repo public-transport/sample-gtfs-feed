@@ -16,6 +16,7 @@
 		"calendar_dates.js",
 		"transfers.js",
 		"pathways.js",
+		"levels.js",
 		"feed_info.js",
 		"gtfs",
 		"json",

@@ -1,6 +1,7 @@
 'use strict'
 
 const {fta} = require('./agency')
+const levels = require('./levels')
 
 const center = [{ // minimal
 	stop_id: 'center',
@@ -33,6 +34,7 @@ const airport = [{ // full
 	location_type: '0',
 	parent_station: 'airport',
 	wheelchair_boarding: '2',
+	level_id: levels.airport1.level_id,
 }, {
 	stop_id: 'airport-1-access',
 	stop_name: null,
@@ -42,6 +44,7 @@ const airport = [{ // full
 	location_type: '3',
 	parent_station: 'airport',
 	wheelchair_boarding: '2',
+	level_id: levels.airport1.level_id,
 	platform_code: '1',
 }, {
 	stop_id: 'airport-2',
@@ -53,6 +56,7 @@ const airport = [{ // full
 	location_type: '0',
 	parent_station: 'airport',
 	wheelchair_boarding: '0',
+	level_id: levels.airport2.level_id,
 	platform_code: '2',
 }, {
 	stop_id: 'airport-2-boarding',
@@ -63,6 +67,7 @@ const airport = [{ // full
 	location_type: '4',
 	parent_station: 'airport-2',
 	wheelchair_boarding: '1',
+	level_id: levels.airport2.level_id,
 }, {
 	stop_id: 'airport-2-access',
 	stop_name: null,
@@ -72,6 +77,7 @@ const airport = [{ // full
 	location_type: '3',
 	parent_station: 'airport',
 	wheelchair_boarding: '1',
+	level_id: levels.airport2.level_id,
 }, {
 	stop_id: 'airport-entrance',
 	stop_name: 'Entrance',
@@ -81,6 +87,7 @@ const airport = [{ // full
 	location_type: '2',
 	parent_station: 'airport',
 	wheelchair_boarding: '1',
+	level_id: levels.airport0.level_id,
 }]
 airport.station = airport[0]
 airport.stops = airport.slice(1)

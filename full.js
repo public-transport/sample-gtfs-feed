@@ -10,5 +10,6 @@ module.exports = {
 	calendar_dates: require('./calendar_dates'),
 	transfers: require('./transfers'),
 	pathways: require('./pathways'),
+	levels: require('./levels'),
 	feed_info: require('./feed_info').full
 }
