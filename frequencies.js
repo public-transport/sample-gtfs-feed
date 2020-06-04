@@ -25,8 +25,8 @@ const bOutboundSchoolService = {
 }
 
 const all = [
-	bDowntownOnWorkingDays,
-	bOutboundOnWorkingDays,
+	bDowntownSchoolService,
+	bOutboundSchoolService,
 ]
 all.full = all.minimal = all
 all.bDowntownSchoolService = bDowntownSchoolService
