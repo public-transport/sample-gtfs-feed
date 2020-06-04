@@ -30,17 +30,33 @@ const forAOutbound = [].concat(
 )
 
 const forBDowntown = [].concat(
-	applyToTrips(bDowntown, 1, '13:13:00', '13:14:00', airport.station),
-	applyToTrips([bDowntown[0]], 3, '13:20:00', '13:22:00', lake.station),
-	applyToTrips(bDowntown.slice(1), 3, '13:22:00', '13:24:00', lake.station),
-	applyToTrips(bDowntown, 5, '13:30:00', '13:31:00', center.station)
+	applyToTrips(bDowntown, 1, '13:13:00', '13:14:00', airport.station, {
+		timepoint: 1, // times are considered exact
+	}),
+	applyToTrips([bDowntown[0]], 3, '13:20:00', '13:22:00', lake.station, {
+		pickup_type: 3, // must arrange with driver to arrange pickup
+	}),
+	applyToTrips(bDowntown.slice(1), 3, '13:22:00', '13:24:00', lake.station, {
+		pickup_type: 1, // no pickup available
+	}),
+	applyToTrips(bDowntown, 5, '13:30:00', '13:31:00', center.station, {
+		timepoint: 1, // times are considered exact
+	})
 )
 
 const forBOutbound = [].concat(
-	applyToTrips(bOutbound, 11, '18:13:00', '18:14:00', center.station),
-	applyToTrips([bOutbound[0]], 13, '18:20:00', '18:22:00', lake.station),
-	applyToTrips(bOutbound.slice(1), 13, '18:22:00', '18:24:00', lake.station),
-	applyToTrips(bOutbound, 15, '18:30:00', '18:31:00', airport.station)
+	applyToTrips(bOutbound, 11, '18:13:00', '18:14:00', center.station, {
+		timepoint: 1, // times are considered exact
+	}),
+	applyToTrips([bOutbound[0]], 13, '18:20:00', '18:22:00', lake.station, {
+		drop_off_type: 3, // must arrange with driver to arrange drop off
+	}),
+	applyToTrips(bOutbound.slice(1), 13, '18:22:00', '18:24:00', lake.station, {
+		drop_off_type: 1, // no drop off available
+	}),
+	applyToTrips(bOutbound, 15, '18:30:00', '18:31:00', airport.station, {
+		timepoint: 1, // times are considered exact
+	})
 )
 
 const forCDowntown = [].concat(
