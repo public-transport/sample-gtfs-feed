@@ -14,6 +14,7 @@
 		"stop_times.js",
 		"calendar.js",
 		"calendar_dates.js",
+		"frequencies.js",
 		"transfers.js",
 		"pathways.js",
 		"levels.js",

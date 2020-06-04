@@ -25,6 +25,7 @@ Using following GTFS tables, `sample-gtfs-feed` forms a GTFS feed for a simple f
 - [`stop_times`](https://developers.google.com/transit/gtfs/reference#stop_timestxt)
 - [`calendar`](https://developers.google.com/transit/gtfs/reference#calendartxt)
 - [`calendar_dates`](https://developers.google.com/transit/gtfs/reference#calendar_datestxt)
+- [`frequencies`](https://developers.google.com/transit/gtfs/reference#frequenciestxt)
 - [`transfers`](https://developers.google.com/transit/gtfs/reference#transferstxt)
 - [`pathways`](https://developers.google.com/transit/gtfs/reference#pathwaystxt)
 - [`levels`](https://developers.google.com/transit/gtfs/reference#levelstxt)
