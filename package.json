@@ -1,7 +1,7 @@
 {
 	"name": "sample-gtfs-feed",
 	"description": "An imaginary GTFS data set used for testing.",
-	"version": "0.5.1",
+	"version": "0.6.0",
 	"main": "index.js",
 	"files": [
 		"index.js",
@@ -41,6 +41,7 @@
 	"dependencies": {},
 	"devDependencies": {
 		"csv-write-stream": "^2.0.0",
+		"lodash": "^4.17.20",
 		"pump": "^3.0.0"
 	},
 	"scripts": {

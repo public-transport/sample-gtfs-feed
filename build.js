@@ -1,11 +1,23 @@
 'use strict'
 
+const sortBy = require('lodash/sortBy')
 const path = require('path')
 const toCsv = require('csv-write-stream')
 const pump = require('pump')
 const fs = require('fs')
 
 const full = require('./full')
+
+const orders = Object.assign(Object.create(null), {
+	'agency': ['agency_id'],
+	'stops': ['stop_id'],
+	'routes': ['route_id'],
+	'trips': ['trip_id'],
+	'stop_times': ['trip_id', 'stop_sequence'],
+	'calendar': ['service_id'],
+	'calendar_dates': ['service_id', 'date'],
+	'frequencies': ['trip_id', 'start_time'],
+})
 
 const showError = (err) => {
 	if (!err) return null
@@ -14,7 +26,7 @@ const showError = (err) => {
 }
 
 for (let set of Object.keys(full)) {
-	const data = full[set]
+	let data = full[set]
 
 	// determine columns
 	let cols = undefined
@@ -24,6 +36,11 @@ for (let set of Object.keys(full)) {
 			for (const col of Object.keys(item)) cols.add(col)
 		}
 		cols = Array.from(cols.values())
+	}
+
+	// sort data
+	if (Array.isArray(data) && (set in orders)) {
+		data = sortBy(data, orders[set])
 	}
 
 	// write GTFS
