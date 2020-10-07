@@ -5,6 +5,7 @@ const {
 	aDowntown, aOutbound,
 	bDowntown, bOutbound,
 	cDowntown,
+	dst,
 } = require('./trips')
 
 const applyToTrips = (trips, seq, arr, dep, stop, more = {}) => {
@@ -70,10 +71,16 @@ const forCDowntown = [].concat(
 
 // todo: 2 trips for one schedule
 
+const forDst = [].concat(
+	applyToTrips(dst, 0, '25:55:00', '25:58:00', airport.station),
+	applyToTrips(dst, 1, '26:03:00', '26:05:00', center.station),
+)
+
 const all = [].concat(
 	forADowntown, forAOutbound,
 	forBDowntown, forBOutbound,
 	forCDowntown,
+	forDst,
 )
 module.exports = Object.assign(all, {
 	minimal: [].concat(forADowntown, forAOutbound),

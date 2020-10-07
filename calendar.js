@@ -41,10 +41,25 @@ const onWeekends = {
 	end_date: feed_end_date
 }
 
+const duringDST = {
+	service_id: 'during-dst',
+	monday: '0',
+	tuesday: '0',
+	wednesday: '0',
+	thursday: '0',
+	friday: '0',
+	saturday: '1',
+	sunday: '0',
+	start_date: '20190330',
+	end_date: '20190330',
+}
+
 module.exports = Object.assign([
 	allDay,
 	onWorkingDays, onWeekends,
+	duringDST,
 ], {
 	allDay, minimal: allDay,
 	onWorkingDays, onWeekends,
+	duringDST,
 })

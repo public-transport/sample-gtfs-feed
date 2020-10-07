@@ -32,13 +32,23 @@ const c = {
 	route_type: tram + ''
 }
 
+const d = {
+	route_id: 'D',
+	agency_id: fta.agency_id,
+	route_short_name: 'DST',
+	route_long_name: 'Daylight Saving Time Express',
+	route_type: tram + '',
+}
+
 module.exports = Object.assign([
 	a,
 	b,
 	c,
+	d,
 ], {
 	a,
 	b,
 	c,
+	d,
 	minimal: a, full: b
 })

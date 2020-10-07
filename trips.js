@@ -4,10 +4,12 @@ const {
 	a,
 	b,
 	c,
+	d,
 } = require('./routes')
 const {
 	allDay,
 	onWorkingDays, onWeekends,
+	duringDST,
 } = require('./calendar')
 
 // minimal
@@ -79,13 +81,22 @@ const cDowntown = [{
 	trip_headsign: 'Cerf Express'
 }]
 
+const dst = [{
+	route_id: d.route_id,
+	service_id: duringDST.service_id,
+	trip_id: 'during-dst-1',
+	trip_headsign: 'Hello Daylight Saving Time!',
+}]
+
 const all = [].concat(
 	aDowntown, aOutbound,
 	bDowntown, bOutbound,
 	cDowntown,
+	dst,
 )
 module.exports = Object.assign(all, {
 	aDowntown, aOutbound, minimal: [].concat(aDowntown, aOutbound),
 	bDowntown, bOutbound, full: [].concat(bDowntown, bOutbound),
 	cDowntown,
+	dst,
 })
