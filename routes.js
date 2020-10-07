@@ -32,7 +32,13 @@ const c = {
 	route_type: tram + ''
 }
 
-module.exports = Object.assign([a, b, c], {
-	a, b, c,
+module.exports = Object.assign([
+	a,
+	b,
+	c,
+], {
+	a,
+	b,
+	c,
 	minimal: a, full: b
 })

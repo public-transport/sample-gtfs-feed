@@ -41,7 +41,10 @@ const onWeekends = {
 	end_date: feed_end_date
 }
 
-module.exports = Object.assign([allDay, onWorkingDays, onWeekends], {
+module.exports = Object.assign([
+	allDay,
+	onWorkingDays, onWeekends,
+], {
 	allDay, minimal: allDay,
-	onWorkingDays, onWeekends
+	onWorkingDays, onWeekends,
 })
