@@ -18,13 +18,13 @@ const id = () => i++ + ''
 
 // not wheelchair-accessible
 const airportEntranceToPl1 = [{
-	id: id(),
+	pathway_id: id(),
 	from_stop_id: entrance.stop_id,
 	to_stop_id: pl1AccessNode.stop_id,
 	pathway_mode: ESCALATOR,
 	is_bidirectional: '1',
 }, {
-	id: id(),
+	pathway_id: id(),
 	from_stop_id: pl1AccessNode.stop_id,
 	to_stop_id: pl1.stop_id,
 	pathway_mode: STAIRS,
@@ -33,7 +33,7 @@ const airportEntranceToPl1 = [{
 
 // wheelchair-accessible
 const airportEntranceToPl2Boarding = [{
-	id: id(),
+	pathway_id: id(),
 	from_stop_id: entrance.stop_id,
 	to_stop_id: pl2AccessNode.stop_id,
 	pathway_mode: WALKWAY,
@@ -45,7 +45,7 @@ const airportEntranceToPl2Boarding = [{
 	signposted_as: 'towards platform 2 boarding',
 	reversed_signposted_as: 'main hall',
 }, {
-	id: id(),
+	pathway_id: id(),
 	from_stop_id: pl2AccessNode.stop_id,
 	to_stop_id: pl2Boarding.stop_id,
 	pathway_mode: ELEVATOR,
