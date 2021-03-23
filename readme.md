@@ -56,6 +56,8 @@ FTA,Full Transit Agency,https://fta.example.org/,Europe/Warsaw,de,+49 123 456 78
 MTA,Minimal Transit Agency,https://mta.example.org/,Europe/Berlin,,,,
 ```
 
+There's also a `.zip` file of these plain CSV files available as `sample-gtfs-feed/gtfs.zip`.
+
 ### JSON files
 
 ```shell

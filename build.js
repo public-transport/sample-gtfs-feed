@@ -2,11 +2,12 @@
 
 const {promisify} = require('util')
 const {pipeline} = require('stream')
+const {exec} = require('child_process')
 const toCsv = require('csv-write-stream')
 const {createWriteStream} = require('fs')
 const sortBy = require('lodash/sortBy')
 const path = require('path')
-const {writeFile} = require('fs').promises
+const {writeFile, unlink} = require('fs').promises
 
 const full = require('./full')
 
@@ -22,6 +23,7 @@ const orders = Object.assign(Object.create(null), {
 })
 
 const pPipeline = promisify(pipeline)
+const pExec = promisify(exec)
 
 const writeCsv = async (dest, cols, rows) => {
 	const sink = toCsv({headers: cols})
@@ -53,6 +55,15 @@ const writeCsv = async (dest, cols, rows) => {
 		const dest = path.join(__dirname, 'json', set + '.json')
 		await writeFile(dest, JSON.stringify(data))
 	}
+
+	try {
+		await unlink(path.join(__dirname, 'gtfs.zip'))
+	} catch (err) {
+		if (err && err.code !== 'ENOENT') throw err
+	}
+	await pExec('zip -r -D -9 ../gtfs.zip *.txt', {
+		cwd: path.join(__dirname, 'gtfs'),
+	})
 })()
 .catch((err) => {
 	console.error(err)
