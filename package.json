@@ -36,7 +36,7 @@
 	"bugs": "https://github.com/public-transport/sample-gtfs-feed/issues",
 	"license": "ISC",
 	"engines": {
-		"node": ">=6"
+		"node": ">=12"
 	},
 	"dependencies": {},
 	"devDependencies": {
