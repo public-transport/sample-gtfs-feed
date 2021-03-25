@@ -41,11 +41,13 @@
 	"dependencies": {},
 	"devDependencies": {
 		"csv-write-stream": "^2.0.0",
+		"eslint": "^7.22.0",
 		"lodash": "^4.17.20",
 		"pump": "^3.0.0"
 	},
 	"scripts": {
+		"lint": "eslint .",
 		"build": "env NODE_ENV=dev node build.js",
-		"prepublishOnly": "npm run build"
+		"prepublishOnly": "npm run lint && npm run build"
 	}
 }
