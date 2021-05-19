@@ -19,6 +19,7 @@ const orders = Object.assign(Object.create(null), {
 	'stop_times': ['trip_id', 'stop_sequence'],
 	'calendar': ['service_id'],
 	'calendar_dates': ['service_id', 'date'],
+	'shapes': ['shape_id', 'shape_pt_sequence'],
 	'frequencies': ['trip_id', 'start_time'],
 })
 

@@ -18,6 +18,7 @@ const aDowntown = [{
 	service_id: allDay.service_id,
 	trip_id: 'a-downtown-all-day',
 	// trip_headsign: 'Ada (Downtown)',
+	shape_id: 'a-downtown-all-day-s0',
 }]
 const aOutbound = [{
 	route_id: a.route_id,
