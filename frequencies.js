@@ -11,15 +11,15 @@ ok(bOutboundOnWorkingDays, 'trip b-outbound-on-working-days not found')
 
 const bDowntownSchoolService = {
 	trip_id: bDowntownOnWorkingDays.trip_id,
-	start_time: '08:00',
-	end_time: '08:59',
+	start_time: '08:00:00',
+	end_time: '08:59:00',
 	headway_secs: 5 * 60,
 	exact_times: '1', // Schedule-based trips with the exact same headway throughout the day.
 }
 const bOutboundSchoolService = {
 	trip_id: bOutboundOnWorkingDays.trip_id,
-	start_time: '15:00',
-	end_time: '16:00',
+	start_time: '15:00:00',
+	end_time: '16:00:00',
 	headway_secs: 10 * 60,
 	exact_times: '0', // Frequency-based trips.
 }
