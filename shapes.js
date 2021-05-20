@@ -1153,7 +1153,7 @@ const forAOutboundPoints = [
 ]
 
 const formatRow = (shape_id) => (row, i) => {
-	const [shape_pt_lon, shape_pt_lat, shape_dist_traveled] = row
+	const [shape_pt_lat, shape_pt_lon, shape_dist_traveled] = row
 	return {
 		shape_id,
 		shape_pt_sequence: i,
