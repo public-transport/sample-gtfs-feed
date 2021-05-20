@@ -25,6 +25,7 @@ const aOutbound = [{
 	service_id: allDay.service_id,
 	trip_id: 'a-outbound-all-day',
 	// trip_headsign: 'Ada (Outbound)',
+	shape_id: 'a-outbound-all-day-s0',
 }]
 
 // full
