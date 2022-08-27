@@ -47,7 +47,7 @@ const bTranslated = [{
 	translation: 'Tram-Linie Charles Babbage',
 	record_id: null,
 	record_sub_id: null,
-	fiedl_value: 'Charles Babbage Tram Line',
+	field_value: 'Charles Babbage Tram Line',
 }, {
 	table_name: 'routes',
 	field_name: 'route_desc',
@@ -55,7 +55,7 @@ const bTranslated = [{
 	translation: 'Verbindet das Stadtzentrum mit dem Flughafen.',
 	record_id: b.route_id,
 	record_sub_id: null,
-	fiedl_value: null,
+	field_value: null,
 }]
 
 const bDowntownOnWeekendsTranslated = {
