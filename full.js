@@ -13,5 +13,6 @@ module.exports = {
 	transfers: require('./transfers'),
 	pathways: require('./pathways'),
 	levels: require('./levels'),
-	feed_info: require('./feed_info').full
+	feed_info: require('./feed_info').full,
+	translations: require('./translations'),
 }

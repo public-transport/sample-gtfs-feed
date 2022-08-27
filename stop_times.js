@@ -83,6 +83,10 @@ const all = [].concat(
 	forDst,
 )
 module.exports = Object.assign(all, {
+	forADowntown, forAOutbound,
+	forBDowntown, forBOutbound,
+	forCDowntown,
+	forDst,
 	minimal: [].concat(forADowntown, forAOutbound),
 	full: all
 })
