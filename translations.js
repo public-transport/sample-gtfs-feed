@@ -74,7 +74,7 @@ const bOutboundOnWeekendsTranslated = {
 	translation: 'Babbage (auswärts)',
 	record_id: null,
 	record_sub_id: null,
-	field_value: bDowntownOnWeekends.trip_headsign,
+	field_value: bOutboundOnWeekends.trip_headsign,
 }
 
 const forBOutboundOnWeekends0 = forBOutbound.find(({trip_id}) => trip_id === bOutboundOnWeekends.trip_id)
