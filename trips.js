@@ -82,6 +82,12 @@ const cDowntown = [{
 	trip_id: 'c-downtown-all-day',
 	trip_headsign: 'Cerf Express'
 }]
+const cOutbound = [{
+	route_id: c.route_id,
+	service_id: allDay.service_id,
+	trip_id: 'c-outbound-all-day',
+	trip_headsign: 'Cerf Express (outbound)',
+}]
 
 const dst = [{
 	route_id: d.route_id,
@@ -93,12 +99,12 @@ const dst = [{
 const all = [].concat(
 	aDowntown, aOutbound,
 	bDowntown, bOutbound,
-	cDowntown,
+	cDowntown, cOutbound,
 	dst,
 )
 module.exports = Object.assign(all, {
 	aDowntown, aOutbound, minimal: [].concat(aDowntown, aOutbound),
 	bDowntown, bOutbound, full: [].concat(bDowntown, bOutbound),
-	cDowntown,
+	cDowntown, cOutbound,
 	dst,
 })

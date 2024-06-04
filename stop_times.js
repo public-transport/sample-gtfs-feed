@@ -4,7 +4,7 @@ const {center, museum, airport, lake} = require('./stops')
 const {
 	aDowntown, aOutbound,
 	bDowntown, bOutbound,
-	cDowntown,
+	cDowntown, cOutbound,
 	dst,
 } = require('./trips')
 
@@ -68,6 +68,13 @@ const forCDowntown = [].concat(
 	applyToTrips(cDowntown, 0, '15:27:00', '15:28:00', airport.station),
 	applyToTrips(cDowntown, 1, '15:33:00', '15:35:00', center.station)
 )
+const forCOutbound = [].concat(
+	// contains a loop: airport -> museum -> airport
+	applyToTrips(cOutbound, 1,      null,  '19:20:00', airport.station),
+	applyToTrips(cOutbound, 2, '19:29:30', '19:30:30', museum.station),
+	applyToTrips(cOutbound, 3, '19:39:30', '19:40:30', airport.station),
+	applyToTrips(cOutbound, 4, '19:50:00',      null,  center.station),
+)
 
 // todo: 2 trips for one schedule
 
@@ -79,13 +86,13 @@ const forDst = [].concat(
 const all = [].concat(
 	forADowntown, forAOutbound,
 	forBDowntown, forBOutbound,
-	forCDowntown,
+	forCDowntown, forCOutbound,
 	forDst,
 )
 module.exports = Object.assign(all, {
 	forADowntown, forAOutbound,
 	forBDowntown, forBOutbound,
-	forCDowntown,
+	forCDowntown, forCOutbound,
 	forDst,
 	minimal: [].concat(forADowntown, forAOutbound),
 	full: all
