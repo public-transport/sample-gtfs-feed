@@ -11,6 +11,16 @@ const airportPl1 = airport.find(({stop_id}) => stop_id === 'airport-1')
 const bDowntownOnWeekends = bDowntown.find(({trip_id}) => trip_id === 'b-downtown-on-weekends')
 const bOutboundOnWeekends = bOutbound.find(({trip_id}) => trip_id === 'b-outbound-on-weekends')
 
+const feedInfoTranslated = {
+	table_name: 'feed_info',
+	field_name: 'feed_publisher_url',
+	language: 'de-DE',
+	translation: 'https://example.org/?locale=de-DE',
+	record_id: null,
+	record_sub_id: null,
+	field_value: null,
+}
+
 const ftaTranslated = {
 	table_name: 'agency',
 	field_name: 'agency_url',
@@ -115,6 +125,7 @@ const airportLevelsTranslated = [{
 }]
 
 const all = [].concat(
+	feedInfoTranslated,
 	ftaTranslated,
 	airportEntranceTranslated,
 	airportPl1Translated,
@@ -125,6 +136,7 @@ const all = [].concat(
 	airportLevelsTranslated,
 )
 module.exports = Object.assign(all, {
+	feedInfoTranslated,
 	ftaTranslated,
 	airportEntranceTranslated,
 	airportPl1Translated,
