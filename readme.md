@@ -1,6 +1,6 @@
 # sample-gtfs-feed
 
-**An imaginary [GTFS](https://developers.google.com/transit/gtfs/) data set used for testing.**
+**An imaginary [GTFS Schedule](https://gtfs.org/schedule/) dataset used for testing.**
 
 [![npm version](https://img.shields.io/npm/v/sample-gtfs-feed.svg)](https://www.npmjs.com/package/sample-gtfs-feed)
 ![ISC-licensed](https://img.shields.io/github/license/public-transport/sample-gtfs-feed.svg)
@@ -19,18 +19,18 @@ npm install sample-gtfs-feed
 
 Using following GTFS tables, `sample-gtfs-feed` forms a GTFS feed for a simple fictional transit network:
 
-- [`agency`](https://developers.google.com/transit/gtfs/reference#agencytxt)
-- [`stops`](https://developers.google.com/transit/gtfs/reference#stopstxt)
-- [`routes`](https://developers.google.com/transit/gtfs/reference#routestxt)
-- [`trips`](https://developers.google.com/transit/gtfs/reference#tripstxt)
-- [`stop_times`](https://developers.google.com/transit/gtfs/reference#stop_timestxt)
-- [`calendar`](https://developers.google.com/transit/gtfs/reference#calendartxt)
-- [`calendar_dates`](https://developers.google.com/transit/gtfs/reference#calendar_datestxt)
-- [`frequencies`](https://developers.google.com/transit/gtfs/reference#frequenciestxt)
-- [`transfers`](https://developers.google.com/transit/gtfs/reference#transferstxt)
-- [`pathways`](https://developers.google.com/transit/gtfs/reference#pathwaystxt)
-- [`levels`](https://developers.google.com/transit/gtfs/reference#levelstxt)
-- [`feed_info`](https://developers.google.com/transit/gtfs/reference#feed_infotxt)
+- [`agency`](https://https://gtfs.org/schedule/reference/#agencytxt)
+- [`stops`](https://https://gtfs.org/schedule/reference/#stopstxt)
+- [`routes`](https://https://gtfs.org/schedule/reference/#routestxt)
+- [`trips`](https://https://gtfs.org/schedule/reference/#tripstxt)
+- [`stop_times`](https://https://gtfs.org/schedule/reference/#stop_timestxt)
+- [`calendar`](https://https://gtfs.org/schedule/reference/#calendartxt)
+- [`calendar_dates`](https://https://gtfs.org/schedule/reference/#calendar_datestxt)
+- [`frequencies`](https://https://gtfs.org/schedule/reference/#frequenciestxt)
+- [`transfers`](https://https://gtfs.org/schedule/reference/#transferstxt)
+- [`pathways`](https://https://gtfs.org/schedule/reference/#pathwaystxt)
+- [`levels`](https://https://gtfs.org/schedule/reference/#levelstxt)
+- [`feed_info`](https://https://gtfs.org/schedule/reference/#feed_infotxt)
 
 ### plain CSV files
 

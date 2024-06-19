@@ -1,7 +1,7 @@
 {
 	"name": "sample-gtfs-feed",
 	"description": "An imaginary GTFS data set used for testing.",
-	"version": "0.12.1",
+	"version": "0.12.2",
 	"main": "index.js",
 	"files": [
 		"index.js",
