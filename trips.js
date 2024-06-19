@@ -82,10 +82,16 @@ const cDowntown = [{
 	trip_id: 'c-downtown-all-day',
 	trip_headsign: 'Cerf Express'
 }]
+// same route, same headsign, different service schedule
 const cOutbound = [{
 	route_id: c.route_id,
 	service_id: allDay.service_id,
 	trip_id: 'c-outbound-all-day',
+	trip_headsign: 'Cerf Express (outbound)',
+}, {
+	route_id: c.route_id,
+	service_id: onWeekends.service_id,
+	trip_id: 'c-outbound-on-weekends',
 	trip_headsign: 'Cerf Express (outbound)',
 }]
 
