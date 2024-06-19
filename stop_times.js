@@ -1,5 +1,6 @@
 'use strict'
 
+const {ok} = require('assert')
 const {center, museum, airport, lake} = require('./stops')
 const {
 	aDowntown, aOutbound,
@@ -7,6 +8,9 @@ const {
 	cDowntown, cOutbound,
 	dst,
 } = require('./trips')
+
+const airport1 = airport.stops.find(({stop_id}) => stop_id === 'airport-1')
+ok(airport1)
 
 const applyToTrips = (trips, seq, arr, dep, stop, more = {}) => {
 	const stop_times = []
@@ -23,8 +27,10 @@ const applyToTrips = (trips, seq, arr, dep, stop, more = {}) => {
 }
 
 const forADowntown = [].concat(
-	applyToTrips(aDowntown, 3, '15:23:00', '15:24:00', airport.station),
+	// Same station (not stop) & departure_time as cDowntown.
+	applyToTrips(aDowntown, 3, '15:23:00', '15:24:00', airport1),
 	applyToTrips(aDowntown, 4, '15:30:00', '15:31:00', museum.station),
+	// Same stop & arrival_time as cDowntown.
 	applyToTrips(aDowntown, 5, '15:35:00', '15:36:00', center.station)
 )
 
@@ -65,8 +71,10 @@ const forBOutbound = [].concat(
 )
 
 const forCDowntown = [].concat(
-	applyToTrips(cDowntown, 0, '15:27:00', '15:28:00', airport.station),
-	applyToTrips(cDowntown, 1, '15:33:00', '15:35:00', center.station)
+	// Same station (not stop) & departure_time as ADowntown.
+	applyToTrips(cDowntown, 0, '15:22:30', '15:24:00', airport.station),
+	// Same stop & arrival_time as ADowntown.
+	applyToTrips(cDowntown, 1, '15:35:00', '15:36:00', center.station),
 )
 const forCOutbound = [].concat(
 	// contains a loop: airport -> museum -> airport
