@@ -76,15 +76,30 @@ const forCDowntown = [].concat(
 	// Same stop & arrival_time as ADowntown.
 	applyToTrips(cDowntown, 1, '15:35:00', '15:36:00', center.station),
 )
-const forCOutbound = [].concat(
-	// contains a loop: airport -> museum -> airport
-	applyToTrips(cOutbound, 1,      null,  '19:20:00', airport.station),
-	applyToTrips(cOutbound, 2, '19:29:30', '19:30:30', museum.station),
-	applyToTrips(cOutbound, 3, '19:39:30', '19:40:30', airport.station),
-	applyToTrips(cOutbound, 4, '19:50:00',      null,  center.station),
-)
 
-// todo: 2 trips for one schedule
+const _cOutboundAllDay = cOutbound.find(({trip_id}) => trip_id === 'c-outbound-all-day')
+ok(_cOutboundAllDay)
+const cOutboundAllDay = [_cOutboundAllDay]
+const _cOutboundOnWeekends = cOutbound.find(({trip_id}) => trip_id === 'c-outbound-on-weekends')
+ok(_cOutboundOnWeekends)
+const cOutboundOnWeekends = [_cOutboundOnWeekends]
+
+const forCOutboundAllDay = [].concat(
+	// contains a loop: airport -> museum -> airport
+	applyToTrips(cOutboundAllDay, 1,      null,  '19:20:00', airport.station),
+	applyToTrips(cOutboundAllDay, 2, '19:29:30', '19:30:30', museum.station),
+	applyToTrips(cOutboundAllDay, 3, '19:39:30', '19:40:30', airport.station),
+	applyToTrips(cOutboundAllDay, 4, '19:50:00',      null,  center.station),
+)
+const forCOutboundOnWeekends = [].concat(
+	applyToTrips(cOutboundOnWeekends, 1,      null,  '19:20:00', airport1),
+	applyToTrips(cOutboundOnWeekends, 2, '19:29:30', '19:30:30', museum.station),
+	applyToTrips(cOutboundOnWeekends, 3, '19:50:00',      null,  center.station),
+)
+const forCOutbound = [
+	...forCOutboundAllDay,
+	...forCOutboundOnWeekends,
+]
 
 const forDst = [].concat(
 	applyToTrips(dst, 0, '25:55:00', '25:58:00', airport.station),
