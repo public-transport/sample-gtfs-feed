@@ -7,7 +7,7 @@ const minimal = {
 }
 
 const full = Object.assign({
-	default_lange: 'de-AT',
+	default_lang: 'de-AT',
 	feed_start_date: '20190303',
 	feed_end_date: '20190810',
 	feed_version: 'third version',
