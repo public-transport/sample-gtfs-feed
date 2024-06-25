@@ -31,7 +31,7 @@ const ftaTranslated = {
 	field_value: null,
 }
 
-const airportEntranceTranslated = {
+const airportEntranceTranslated = [{
 	table_name: 'stops',
 	field_name: 'stop_name',
 	language: 'de-DE',
@@ -39,7 +39,15 @@ const airportEntranceTranslated = {
 	record_id: airportEntrance.stop_id,
 	record_sub_id: null,
 	field_value: null,
-}
+}, {
+	table_name: 'stops',
+	field_name: 'stop_name',
+	language: 'es-ES',
+	translation: 'Entrada',
+	record_id: airportEntrance.stop_id,
+	record_sub_id: null,
+	field_value: null,
+}]
 const airportPl1Translated = {
 	table_name: 'stops',
 	field_name: 'stop_name',
